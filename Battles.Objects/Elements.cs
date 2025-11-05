@@ -5,5 +5,7 @@
         Fire,
         Water,
         Grass,
+        Lightning,
+        Rock,
     }
 }

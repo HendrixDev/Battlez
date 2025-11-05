@@ -12,6 +12,10 @@
             PlayerTwo = player2;
             BattleLog = new List<string>();
         }
+        public Player Winner { get; set; }
+        public Player Loser { get; set; }
+
+
 
         //TODO: Add winner and loser
     }
