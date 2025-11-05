@@ -17,6 +17,7 @@ monsterOne.Name = "Pikachu";
 monsterOne.Health = 100;
 monsterOne.Type = Element.Lightning;
 
+//add monsterOne to playerOne's Monsters list
 playerOne.Monsters.Add(monsterOne);
 
 //TODO: create a second monster and add it to playerOne's Monsters list (be sure to assign values to all properties)
