@@ -1,35 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
-using Battles.Objects;
+﻿using Battles.Objects;
 
-Console.WriteLine("Hello, World!");
+//create new player object called playerOne
+Player playerOne = new Player();
+
+//assign Ash to playerOne's Name property
+playerOne.Name = "Ash";
+
+//initialize new list of monsters to playerOne's Monsters property
+playerOne.Monsters = new List<Monster>();
+
+//create new monster object called monsterOne
+Monster monsterOne = new Monster();
+
+//assign values to monsterOne's properties
+monsterOne.Name = "Pikachu";
+monsterOne.Health = 100;
+monsterOne.Type = Element.Lightning;
+
+playerOne.Monsters.Add(monsterOne);
+
+//TODO: create a second monster and add it to playerOne's Monsters list (be sure to assign values to all properties)
 
 
-Player playerOne = new Player
-{
-    Name = "Ash",
-    Monsters = new List<Monster>
-    {
-        new Monster { Name = "Squirtle", Health = 100, Type = Element.Water },
-        new Monster {Name = "Charmander", Health = 150, Type = Element.Fire}
-    }
-};
 
-Player playerTwo = new Player
-{
-    Name = "Misty",
-    Monsters = new List<Monster>
-    {
-        new Monster { Name = "Psyduck", Health = 120, Type = Element.Water },
-        new Monster {Name = "Bulbasaur", Health = 130, Type = Element.Grass}
-    }
-};
 
-Battle battle = new Battle(playerOne, playerTwo);
+//TODO: create new player object called playerTwo and assign values to its properties (be sure to add at least one monster to playerTwo's Monsters list)
 
-string currentAction = $"Battle started between {battle.PlayerOne.Name} and {battle.PlayerTwo.Name}!";
 
-battle.BattleLog.Add(currentAction);
-Console.WriteLine(currentAction);
-
-Thread.Sleep(2000);
-Console.WriteLine();
