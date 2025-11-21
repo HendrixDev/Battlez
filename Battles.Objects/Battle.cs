@@ -6,17 +6,14 @@
         public Player PlayerTwo { get; set; }
         public List<string> BattleLog { get; set; }
 
-        public Battle(Player playerOne, Player player2)
+        public Battle(Player player1, Player player2)
         {
-            PlayerOne = playerOne;
+            PlayerOne = player1;
             PlayerTwo = player2;
-            BattleLog = new List<string>();
+            BattleLog = [];
+            BattleLog.Add($"Battle started between {PlayerOne.Name} and {PlayerTwo.Name}");
         }
-        public Player Winner { get; set; }
-        public Player Loser { get; set; }
-
-
-
-        //TODO: Add winner and loser
+        public string Winner { get; set; }
+        public string Loser { get; set; }
     }
 }
